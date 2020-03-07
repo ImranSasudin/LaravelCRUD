@@ -1,16 +1,16 @@
 @extends('layouts.master')
-@section('title','Employees Index')
+@section('title','ڤىکىرجا')
 @section('content')
   <div class="row">
     <div class="col-sm-12">
-    <a href="{{ route ( 'employees.create' ) }}" class = "btn btn-primary">Create</a>
+    <a href="{{ route ( 'employees.create' ) }}" class = "btn btn-primary">چيڤتا</a>
       <table class="table">
         <tr>
-          <th>ID</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Department</th>
-          <th>Phone No.</th>
+          <th>يد</th>
+          <th>ناما ڤىرتاما</th>
+          <th>ناما اکهير</th>
+          <th>دىڤارتمىنت</th>
+          <th>نومبور تىلىفون</th>
         </tr>
         @foreach($employees as $employee)
           <tr class = "text-center">
@@ -19,8 +19,8 @@
             <td>{{ $employee->lastname }}</td>
             <td>{{ $employee->department }}</td>
             <td>{{ $employee->phone }}</td>
-            <td><a href="{{ route ( 'employees.edit',['id'=>$employee->id] ) }}" class = "btn btn-info">Edit</a></td>
-            <td><a href="{{ route ( 'employees.destroy',['id'=>$employee->id] ) }}" class = "btn btn-danger">Delete</a></td>
+            <td><a href="{{ route ( 'employees.edit',['id'=>$employee->id] ) }}" class = "btn btn-info">کىماسکيني</a></td>
+            <td><a href="{{ route ( 'employees.destroy',['id'=>$employee->id] ) }}" class = "btn btn-danger">ڤادام</a></td>
           </tr>
         @endforeach
       </table>

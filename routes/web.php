@@ -24,7 +24,7 @@ Route::get('/', function () {
 //     Route::post('/update','EmployeeController@update')->name('update');
 // });
 
-Route::get('/employees', 'EmployeeController@index')->name('employees.index');
+Route::get('/ڤىکىرجا', 'EmployeeController@index')->name('employees.index');
 Route::get('/employees/{id}/edit','EmployeeController@edit')->name('employees.edit');
 Route::get('/employees/{id}/delete','EmployeeController@destroy')->name('employees.destroy');
 Route::get('/employees/create','EmployeeController@create')->name('employees.create');

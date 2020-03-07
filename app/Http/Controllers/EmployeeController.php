@@ -40,6 +40,14 @@ class EmployeeController extends Controller
         //Persist the employee in the database
         //form data is available in the request object
         $employee = new Employee();
+
+        $request->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'department' => 'required',
+            'phone' => 'required',
+        ]);
+
         //input method is used to get the value of input with its
         //name specified
         $employee->firstname = $request->input('firstname');
@@ -93,4 +101,5 @@ class EmployeeController extends Controller
         $employee->delete();
         return redirect()->route('employees.index');
     }
+
 }

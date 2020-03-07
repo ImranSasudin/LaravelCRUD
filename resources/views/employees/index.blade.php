@@ -3,6 +3,7 @@
 @section('content')
   <div class="row">
     <div class="col-sm-12">
+    <a href="{{ route ( 'employees.create' ) }}" class = "btn btn-primary">Create</a>
       <table class="table">
         <tr>
           <th>ID</th>
@@ -18,8 +19,8 @@
             <td>{{ $employee->lastname }}</td>
             <td>{{ $employee->department }}</td>
             <td>{{ $employee->phone }}</td>
-            <td><a href="{{route('employees.edit',['id'=>$employee->id])}}" class = "btn btn-info">Edit</a></td>
-            <td><a href="{{route('employees.destroy',['id'=>$employee->id])}}" class = "btn btn-danger">Delete</a></td>
+            <td><a href="{{ route ( 'employees.edit',['id'=>$employee->id] ) }}" class = "btn btn-info">Edit</a></td>
+            <td><a href="{{ route ( 'employees.destroy',['id'=>$employee->id] ) }}" class = "btn btn-danger">Delete</a></td>
           </tr>
         @endforeach
       </table>

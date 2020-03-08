@@ -46,7 +46,13 @@ class EmployeeController extends Controller
             'lastname' => 'required',
             'department' => 'required',
             'phone' => 'required',
-        ]);
+        ],
+    [
+        'firstname.required' => 'Sila tulis nama pertama',
+            'lastname.required' => 'B required',
+            'department.required' => 'required',
+            'phone.required' => 'required',
+    ]);
 
         //input method is used to get the value of input with its
         //name specified
